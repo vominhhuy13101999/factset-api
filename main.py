@@ -1,4 +1,4 @@
-from .dcf import DCF
+from dcf import DCF
 import os
 import yfinance as yf
 import webbrowser
