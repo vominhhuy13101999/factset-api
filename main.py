@@ -42,6 +42,5 @@ if __name__ == "__main__":
 
         
         print("----------------loading-------------")
-        rf=float(input())
-        DCF(ticker,rf)
+        a=DCF(ticker,rf)
         print("Done!-please check your Desktop")
