@@ -24,17 +24,17 @@ if __name__ == "__main__":
         print("Next we will ask for risk free rate. The default rate will be 1.48%. Would you want to consult Treasury yield for risk free rate data?[Y/n]")
         a=str(input())
         
-        if a=='y'or a=='Y' or a=='\n':
+        if a=='y'or a=='Y' or a=='\n' or a=='':
             webbrowser.open("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/Pages/TextView.aspx?data=yield")
 
-        for _ in range(1):
-            print("please enter risk free rate(please put 1.48 for 1.48% or enter to pass): ")
+        
+        print("please enter risk free rate(please put 1.48 for 1.48% or enter to pass): ")
 
-            try:
-                rf=float(input())
-                break
-            except:
-                rf=1.48
+        try:
+            rf=float(input())
+            
+        except ValueError:
+            rf=1.48
             
         
         if rf<-3 or rf>2:
