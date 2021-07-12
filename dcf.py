@@ -209,7 +209,7 @@ class DCF():
             row+=2
             self.sheet1.write_formula(col+str(row),'=IF(ISNA(FDS($C$1,"FE_ESTIMATE(SALES,MEAN,ANN_ROLL,"&{}4&"-1,NOW,NOW,,'')")),{}*(1+pRate),FDS($C$1,"FE_ESTIMATE(SALES,MEAN,ANN_ROLL,"&{}4&"-1,NOW,NOW,,'')"))'.format(col,self.subtract(col)+str(row),col),num_bold)
             row+=1
-            self.sheet1.write_formula(col+str(row),'={}/{}-1'.format(col+str(row-1),self.subtract(col)+str(row-1)))
+            self.sheet1.write_formula(col+str(row),'={}/{}-1'.format(col+str(row-1),self.subtract(col)+str(row-1)),percentage)
             row+=3
             self.sheet1.write_formula(col+str(row),'={}*{}'.format(col+str(row-4),col+str(row+1)))
             row+=1
