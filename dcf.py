@@ -154,9 +154,9 @@ class DCF():
         self.sheet1.write(col+str(row+4),"(Assumed 25% Profit Margin on Forecasted Sales)")
         self.sheet1.write(col+str(row+8),"(Assumed FCFE is 75% of Net Income)")
         
-        self.sheet1.write_formula("C29","=NPV(C24,{}14,{}14,{}14,{}14+{}14+{}14)".format(col,self.add(col),self.add(col,2),self.add(col,3),self.add(col,4),self.add(col,5)),currency)
+        self.sheet1.write_formula("C29","=NPV(C24,{}14,{}14,{}14,{}14,{}14+{}14)".format(col,self.add(col),self.add(col,2),self.add(col,3),self.add(col,4),self.add(col,5)),currency)
         
-        self.sheet1.write_formula("C32","=NPV(C24,{}15,{}15,{}15,{}15+{}15+{}15)".format(col,self.add(col),self.add(col,2),self.add(col,3),self.add(col,4),self.add(col,5)),blue_currency)
+        self.sheet1.write_formula("C32","=NPV(C24,{}15,{}15,{}15,{}15,{}15+{}15)".format(col,self.add(col),self.add(col,2),self.add(col,3),self.add(col,4),self.add(col,5)),blue_currency)
         #M4
         
         c1="B"
