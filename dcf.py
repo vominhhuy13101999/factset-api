@@ -81,7 +81,7 @@ class DCF():
         self.sheet1.write("B14",'Free Cash Flow')
         self.sheet1.write("B15",'FactSet estimate ')
         self.sheet1.write("B16",'Estimate selling price FV')
-        self.sheet1.write("B17",'Estimate selling price FV')
+        self.sheet1.write("B17",'Estimate selling price PV')
 
 
         self.sheet1.write("B20","Beta")
