@@ -164,7 +164,7 @@ class DCF():
 
         for _ in range(6,14):
             self.sheet1.write(c1+str(r1),"={}%".format(_),percentage)
-            self.sheet1.write_formula(self.add(c1)+str(r1),"=NPV({},{}15,{}15,{}15,{}15+{}15+{}15)/C26".format(c1+str(r1),col,self.add(col),self.add(col,2),self.add(col,3),self.add(col,4),self.add(col,5)))
+            self.sheet1.write_formula(self.add(c1)+str(r1),"=NPV({},{}15,{}15,{}15,{}15,{}15+{}15)/C26".format(c1+str(r1),col,self.add(col),self.add(col,2),self.add(col,3),self.add(col,4),self.add(col,5)))
             
             
             r1+=1
@@ -172,7 +172,7 @@ class DCF():
         r1=40
         for _ in list(self.drange(-3,3,'0.5')):
             self.sheet1.write(c1+str(r1),"={}%".format(_),percentage)
-            self.sheet1.write_formula(self.add(c1)+str(r1),"=NPV(C24,{}15,{}15,{}15,{}15+{}15+{}15*(1+{})/(C24-{}))/C26".format(col,self.add(col),self.add(col,2),self.add(col,3),self.add(col,4),self.add(col,4),c1+str(r1),c1+str(r1)))
+            self.sheet1.write_formula(self.add(c1)+str(r1),"=NPV(C24,{}15,{}15,{}15,{}15,{}15+{}15*(1+{})/(C24-{}))/C26".format(col,self.add(col),self.add(col,2),self.add(col,3),self.add(col,4),self.add(col,4),c1+str(r1),c1+str(r1)))
 
             r1+=1
             
