@@ -277,7 +277,7 @@ class DCF():
             self.sheet2.write_formula(self.add(col,2)+str(row),'=IF(ISNA(FDS(DCF!$C$1,"FF_COM_SHS_OUT(ANN_R,"&{}&","&{}&")")),0,FDS(DCF!$C$1,"FF_COM_SHS_OUT(ANN_R,"&{}&","&{}&")"))'.format(col+str(row),col+str(row),col+str(row),col+str(row)))
             self.sheet2.write_formula(self.add(col,3)+str(row),'={}/{}'.format(self.add(col)+str(row),self.add(col,2)+str(row)))
             self.sheet2.write_formula(self.add(col,4)+str(row),'=FDS(DCF!$C$1,"FF_BPS(ANN_R,"&{}&","&{}&",,,USD)")'.format(col+str(row),col+str(row)))
-            self.sheet2.write_formula(self.add(col,5)+str(row),'=IF({}<0,EXP({}),{})'.format(self.add(col,4)+str(row),self.add(col,4)+str(row),self.add(col,4)+str(row)))
+            self.sheet2.write_formula(self.add(col,5)+str(row),'=IF(ISNA(IF({}<0,EXP({}),{})),0.1,IF({}<0,EXP({}),{}))'.format(self.add(col,4)+str(row),self.add(col,4)+str(row),self.add(col,4)+str(row),self.add(col,4)+str(row),self.add(col,4)+str(row),self.add(col,4)+str(row)))
             row+=1
         
         self.sheet2.write("D{}".format(row+7),"Growth")
