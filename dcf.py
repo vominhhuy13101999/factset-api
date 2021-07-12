@@ -310,7 +310,7 @@ class DCF():
             self.sheet3.write(col+str(row),"=-{}".format(_))
             self.sheet3.write(self.add(col)+str(row),pYear+r-_)
             self.sheet3.write_formula(self.add(col,2)+str(row),'=FDS(DCF!$C$1,"FF_FREE_CF(ANN_R_FCF,"&{}&"-1,"&{}&"-1,,,USD)")'.format(self.add(col)+str(row),self.add(col)+str(row)))
-            self.sheet3.write_formula(self.add(col,3)+str(row),'=FDS(DCF!$C$1,"FF_COM_SHS_OUT(ANN_R,"&{}&"-1,"&{}&"-1)")'.format(self.add(col)+str(row),self.add(col)+str(row)))
+            self.sheet3.write_formula(self.add(col,3)+str(row),'=IF(ISNA(FDS(DCF!$C$1,"FF_COM_SHS_OUT(ANN_R,"&{}&"-1,"&{}&"-1)")),{},FDS(DCF!$C$1,"FF_COM_SHS_OUT(ANN_R,"&{}&"-1,"&{}&"-1)"))'.format(self.add(col)+str(row),self.add(col)+str(row),self.add(col,3)+str(row+1),self.add(col)+str(row),self.add(col)+str(row)))
             self.sheet3.write_formula(self.add(col,4)+str(row),'={}/{}'.format(self.add(col,2)+str(row),self.add(col,3)+str(row)))
             row+=1
                                   
