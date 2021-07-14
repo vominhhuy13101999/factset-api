@@ -1,0 +1,2 @@
+Xlsxwriter
+yfinance

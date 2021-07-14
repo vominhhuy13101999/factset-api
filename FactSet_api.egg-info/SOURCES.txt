@@ -1,0 +1,10 @@
+README.md
+setup.py
+API/__init__.py
+API/dcf.py
+API/main.py
+FactSet_api.egg-info/PKG-INFO
+FactSet_api.egg-info/SOURCES.txt
+FactSet_api.egg-info/dependency_links.txt
+FactSet_api.egg-info/requires.txt
+FactSet_api.egg-info/top_level.txt
