@@ -1,5 +1,5 @@
 # factset-api
-install guide:
+<strong> Install guide <strong>:
 
 $git clone https://github.com/vominhhuy13101999/factset-api.git
 
