@@ -13,7 +13,7 @@ class DCF():
         self.desktop = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop') 
         self.today=datetime.date.today().year
         if name=='':
-            self.name=self.desktop+"\\DCF_"+str(self)+'.xlsx'
+            self.name=self.desktop+"\\dcf\\DCF_"+str(self)+'.xlsx'
         else:
             self.name=self.desktop+"\\"+self.name+'.xlsx'
         self.default()

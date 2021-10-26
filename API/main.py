@@ -37,7 +37,7 @@ if __name__ == "__main__":
             rf=1.48
             
         
-        if rf<-3 or rf>2:
+        if rf<-3 or rf>4:
             rf=1.48
 
         
